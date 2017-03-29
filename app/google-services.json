@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "812307885180",
+    "firebase_url": "https://hackathon-project-37c69.firebaseio.com",
+    "project_id": "hackathon-project-37c69",
+    "storage_bucket": "hackathon-project-37c69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812307885180:android:12217bc55aa77838",
+        "android_client_info": {
+          "package_name": "com.pratikkataria.hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812307885180-404q2mifrm4hhvj5g45h9cbt6pn3foek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9QxwRV_ZGBSHDMjrvaHDZHyDb2mCkddI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

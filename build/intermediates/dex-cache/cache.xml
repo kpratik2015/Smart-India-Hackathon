@@ -2,22 +2,121 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="D:\sqliteimage\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\8f8552ab877b92a76aae834f543bec3e2acc17e0\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="2332202c0f7f11eccc0dd489c0a3e4909ac91b49">
-        <dex dex="D:\sqliteimage\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6818b7055cb34c3e3c0e05267841995791f27cbc\classes.dex" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_e70ef3f1e1787aa220f2c2a10f1a96e258e03831.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="D:\sqliteimage\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\e572213aa62b402bd396faf67be3eaf22041382b\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="D:\sqliteimage\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_16ea4587350f1d8ed341d362df22bad6c0a71d97\classes.dex" />
+        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_3659dae3661efee564854d42f59c404143ee0bde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\2931d82b0c5461cf4505ce0d8f5ecfe22e8392d0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_5f98e2c04c45c64785504ad40258942f0c53f481.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\8f8552ab877b92a76aae834f543bec3e2acc17e0\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\internal_impl-23.4.0_45e2af1b5fe4ea731125be1926dc5dce3e9b17b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\5007353de5e94e0ffd06ffee89e315f19650240e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_57ed8c4e79b7ee124671f1f1152d2396bfe6f234.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\0d59d44198c7f33a7af1fa744a45cef9d8485c3e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_5efd9a136115adb11d9a81dc87a8a48eee6e00a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\1e608837be6dc16800e0960b5b0dc4f43c1c9d4d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1941832901fc4e7a93300b53762e9f65d7650b99">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_b100d6dda7cae4fd224eb6e6f14632e0058225ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\4706f0c4c155001f674f5f31d88ff60458ea5dfe\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_e86459fabc2a91a63eadeebe3b876723daf15892.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\74a9764d900b31809c18a89022b92da0a2332035\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_0a1b0cdc7cba2ae1592bf03a7c51b369c7a0548b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\8dc0cab9fa30850c0d77b0223a1bb40af2651170\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6f65c144283b31b4b9a70e6e7aa4c4a1c897d4b8">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_ad873e54f38b6f0fc21e3ccea427b4de6b92961f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_e201104ac5fb1d5ba77c1229684dc061930addfb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\6504320f49562b7bd8d606ec5ccfd5fa73d9bb4d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0dc8ab07eeceda5e99b305c8069765056b6e5c9d">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_a1bf5df550c528e1bf8509ca54ad2a7828fffabc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\089d643a8b44e482cd0e2c938a8a5a8e2c2579a2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_6bee20e3963fb369859de79ffde903e31b8122a8.jar" />
     </item>
 
 </items>
