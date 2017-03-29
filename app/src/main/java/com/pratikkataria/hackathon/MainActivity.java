@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button sqliteBtn;
+    Button voltBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sqliteBtn = (Button)findViewById(R.id.sqlitedb);
         sqliteBtn.setOnClickListener(this);
 
+        voltBtn = (Button)findViewById(R.id.voltVal);
+        voltBtn.setOnClickListener(this);
+
 
     }
 
@@ -30,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()) {
             case R.id.sqlitedb:
                 startActivity(new Intent(MainActivity.this,sqliteDbExample.class));
+                break;
+            case R.id.voltVal:
+                startActivity(new Intent(MainActivity.this,csvParseMain.class));
                 break;
         }
     }

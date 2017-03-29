@@ -17,6 +17,7 @@
         </activity>
 
         <activity android:name=".sqliteDbExample"></activity>
+        <activity android:name=".csvParseMain"></activity>
     </application>
 
 </manifest>
