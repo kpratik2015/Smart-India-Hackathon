@@ -5,10 +5,14 @@ import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         meterDB = new databaseHelper(this);
 
+
+        String token = FirebaseInstanceId.getInstance().getToken();
+
+        Log.d("TokenOfDevice", token);
 
     }
 
