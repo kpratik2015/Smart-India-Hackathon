@@ -18,63 +18,25 @@ import android.widget.Toast;
 
 public class sqliteDbExample extends AppCompatActivity {
 
-    databaseHelper peopleDB;
+    databaseHelper meterDB;
     Button btnAddData,btnViewData,btnUpdateData,btnDeleteData;
     EditText etName,etEmail,etLocality,etID;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sqlite);
+        //setContentView(R.layout.activity_sqlite);
 
-        peopleDB = new databaseHelper(this);
-        btnAddData = (Button)findViewById(R.id.btnAddData);
-        etName = (EditText)findViewById(R.id.etNewName);
-        etEmail = (EditText)findViewById(R.id.etNewEmail);
-        etLocality = (EditText)findViewById(R.id.etNewLocality);
-        btnViewData = (Button)findViewById(R.id.btnViewData);
-        btnUpdateData = (Button)findViewById(R.id.btnID);
-        etID = (EditText)findViewById(R.id.etID);
-        btnDeleteData = (Button)findViewById(R.id.btnDelete);
-        AddData();
+        meterDB = new databaseHelper(this);
         ViewData();
-        UpdateData();
-        DeleteData();
-
     }
-
-    public void AddData()
-    {
-        btnAddData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = etName.getText().toString();
-                String email = etEmail.getText().toString();
-                String locality = etLocality.getText().toString();
-
-                boolean insertData = peopleDB.addData(name,email,locality);
-                if(insertData==true)
-                {
-                    Toast.makeText(sqliteDbExample.this,"Data Entered Successfully",Toast.LENGTH_LONG).show();
-                    etID.setText("");
-                    etName.setText("");
-                    etEmail.setText("");
-                    etLocality.setText("");
-                }
-                else
-                {
-                    Toast.makeText(sqliteDbExample.this,"Something went wrong!",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-
+    
     public void ViewData()
     {
         btnViewData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor data = peopleDB.showData();
+                Cursor data = meterDB.showData();
 
                 if(data.getCount() == 0)
                 {
@@ -103,58 +65,5 @@ public class sqliteDbExample extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
-    }
-    public void UpdateData()
-    {
-        btnUpdateData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int temp=etID.getText().toString().length();
-                if(temp>0)
-                {
-                    boolean update = peopleDB.updateData(etID.getText().toString(),etName.getText().toString(),etEmail.getText().toString(),etLocality.getText().toString());
-                    if(update==true)
-                    {
-                        Toast.makeText(sqliteDbExample.this,"Successfully updated data",Toast.LENGTH_LONG).show();
-                    }
-                    else
-                    {
-                        Toast.makeText(sqliteDbExample.this,"Something went wrong!",Toast.LENGTH_LONG).show();
-                    }
-                }
-                else
-                {
-                    Toast.makeText(sqliteDbExample.this,"You must enter ID to update data",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-
-    public void DeleteData()
-    {
-        btnDeleteData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int temp = etID.getText().toString().length();
-                if(temp>0)
-                {
-                    Integer deleterow = peopleDB.deleteProduct(etID.getText().toString());
-                    if(deleterow>0)
-                    {
-                        Toast.makeText(sqliteDbExample.this,"Successfully deleted data!",Toast.LENGTH_LONG).show();
-                    }
-                    else
-                    {
-                        Toast.makeText(sqliteDbExample.this,"Something went wrong!",Toast.LENGTH_LONG).show();
-                    }
-
-                }
-                else
-                {
-                    Toast.makeText(sqliteDbExample.this,"You must enter ID to delete data",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        
     }
 }

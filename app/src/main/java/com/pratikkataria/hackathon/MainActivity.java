@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button sqliteBtn;
     Button voltBtn;
+    databaseHelper meterDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         voltBtn = (Button)findViewById(R.id.voltVal);
         voltBtn.setOnClickListener(this);
 
+        meterDB = new databaseHelper(this);
+
 
     }
 
@@ -33,11 +36,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.sqlitedb:
-                startActivity(new Intent(MainActivity.this,sqliteDbExample.class));
+                DataPull();
                 break;
             case R.id.voltVal:
                 startActivity(new Intent(MainActivity.this,csvParseMain.class));
                 break;
         }
     }
+
+    public void DataPull(){
+        Cursor data = meterDB.showData();
+
+        if(data.getCount() == 0)
+        {
+            //message
+            display("Error","No data found");
+        }
+        StringBuffer buffer = new StringBuffer();
+        while(data.moveToNext())
+        {
+            buffer.append("Device: " + data.getString(0) + "\n");
+            buffer.append("Voltage R: " + data.getString(1) + "\n");
+        }
+        display("All Stored Data: ",buffer.toString());
+
+    }
+
+    public void display(String title,String message)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+    }
+
 }
