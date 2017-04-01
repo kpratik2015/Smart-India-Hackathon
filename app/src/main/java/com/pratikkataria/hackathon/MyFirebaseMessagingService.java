@@ -23,6 +23,9 @@ import com.google.firebase.messaging.RemoteMessage;
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = "MyFirebaseMsgService";
+    public static String LAT =  "22.797017";
+    public static String LONG =  "75.845444";
+
 
     /**
      * Called when message is received.
@@ -60,10 +63,21 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         }
 
+        String temp = "";
+
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+            sendNotification(remoteMessage.getNotification().getBody());
+            temp = remoteMessage.getNotification().getBody();
         }
+
+        //Log.d("LAT",temp.substring(52,61));
+        //Log.d("LONG", temp.substring(73,temp.length()));
+
+        LAT = temp.substring(52,61);
+        LONG = temp.substring(73,temp.length());
+
 
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
@@ -105,7 +119,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_stat_ic_notification)
-                .setContentTitle("FCM Message")
+                .setContentTitle("Power Theft POSSIBLE!")
                 .setContentText(messageBody)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)

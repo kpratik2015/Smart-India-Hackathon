@@ -10,6 +10,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import static com.pratikkataria.hackathon.MyFirebaseMessagingService.LAT;
+import static com.pratikkataria.hackathon.MyFirebaseMessagingService.LONG;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -38,8 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        
-        LatLng theft = new LatLng(22.805311, 75.856248);
+
+        LatLng theft = new LatLng(Float.valueOf(LAT), Float.valueOf(LONG));
         mMap.addMarker(new MarkerOptions().position(theft).title("Marker on Theft"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(theft));
         mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
