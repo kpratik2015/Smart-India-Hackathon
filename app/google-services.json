@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "812307885180-r56hjch7p1d3r5lh46j9sj7oi4jq44fd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratikkataria.hackathon",
+            "certificate_hash": "3fdfed0fe51e3951ac0521cdcf0bca69bf8d0c29"
+          }
+        },
+        {
           "client_id": "812307885180-404q2mifrm4hhvj5g45h9cbt6pn3foek.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812307885180-404q2mifrm4hhvj5g45h9cbt6pn3foek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
