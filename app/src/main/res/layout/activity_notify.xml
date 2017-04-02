@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgd">
+
+    <TextView
+        android:id="@+id/notifyBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textColor="@android:color/background_light"
+        android:textAlignment="center"
+        android:text="This is the data store for notifications received. This is incase you missed it." />
+
+    <Button
+        android:id="@+id/viewNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="VIEW NOTIFICATIONS"
+        android:textColor="@android:color/background_light"
+        android:padding="10dp"
+        android:background="@color/colorTransparent"/>
+</LinearLayout>

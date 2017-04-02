@@ -19,12 +19,16 @@ import com.firebase.jobdispatcher.GooglePlayDriver;
 import com.firebase.jobdispatcher.Job;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import static com.pratikkataria.hackathon.ListViewNotification.items;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = "MyFirebaseMsgService";
     public static String LAT =  "22.797017";
     public static String LONG =  "75.845444";
+    public static String NOTIFY_MSG = "None yet";
 
 
     /**
@@ -70,15 +74,23 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
             sendNotification(remoteMessage.getNotification().getBody());
             temp = remoteMessage.getNotification().getBody();
+            NOTIFY_MSG = temp;
+            items.add(0, temp);
         }
 
-        //Log.d("LAT",temp.substring(52,61));
-        //Log.d("LONG", temp.substring(73,temp.length()));
+        Pattern p=Pattern.compile("-?(0|([1-9]\\d*))(\\.\\d+)");
+        Matcher m=p.matcher(temp);
+        int f=0;
+        while(m.find())
+        {
+            if(f==0)
+                LAT=m.group(0);
+            else
+                LONG=m.group(0);
+            f++;
+            //System.out.println(m.group(0));
 
-        LAT = temp.substring(52,61);
-        LONG = temp.substring(73,temp.length());
-
-
+        }
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
     }

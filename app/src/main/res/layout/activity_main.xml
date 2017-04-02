@@ -46,4 +46,14 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="27dp" />
 
+    <Button
+        android:id="@+id/notifyBtn"
+        android:layout_width="91dp"
+        android:layout_height="101dp"
+        android:background="@drawable/notify_icon"
+        android:text="NOTIFICATION"
+        android:textColor="#FFFFFF"
+        android:layout_alignTop="@+id/mapBtn"
+        android:layout_alignStart="@+id/voltVal" />
+
 </RelativeLayout>

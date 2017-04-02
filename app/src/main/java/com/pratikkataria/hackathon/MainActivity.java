@@ -43,9 +43,7 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button sqliteBtn;
-    Button voltBtn;
-    Button mapBtn;
+    Button sqliteBtn, mapBtn, voltBtn, notifyBtn;
     databaseHelper meterDB;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -65,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mapBtn = (Button)findViewById(R.id.mapBtn);
         mapBtn.setOnClickListener(this);
+
+        notifyBtn = (Button)findViewById(R.id.notifyBtn);
+        notifyBtn.setOnClickListener(this);
 
         //this.deleteDatabase("meter.db");
 
@@ -131,6 +132,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.mapBtn:
                 startActivity(new Intent(MainActivity.this,MapsActivity.class));
+                break;
+            case R.id.notifyBtn:
+                startActivity(new Intent(MainActivity.this,NotificationDb.class));
                 break;
         }
     }
