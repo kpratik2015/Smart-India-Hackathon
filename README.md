@@ -1,8 +1,8 @@
 # Smart-India-Hackathon
 
-Whole Prototype demonstration: https://youtu.be/0PDnGr--PF4
+[Prototype demo on YouTube](https://youtu.be/0PDnGr--PF4)
 
-Mobile App Concept:
+## Mobile App Concept:
 
 	- Login for authorized employees only
 	- SQLite tab for overlooking Voltage values updated in realtime with server along with device selection
@@ -10,6 +10,6 @@ Mobile App Concept:
 	- Maps tab to locate the theft location via the coordinates submitted through Notification or through GSM Module mounted on device
 	- Notification tab to display recent notifications in case missed or accidental clear
 	
-Hackathon (Raw) Implementation:
+## Hackathon (Raw) Implementation:
 
-	The login and notification are based on firebase services. Firebase storage was to be used for real time updations in caught csv file containing voltage values. However, locally stored csv file was parsed due to limitation of time. Google API is used for maps and longitudes and latitudes are read from notification.
+The login and notification are based on firebase services. Firebase storage was to be used for real time updations in caught csv file containing voltage values. However, locally stored csv file was parsed due to limitation of time. Google API is used for maps and longitudes and latitudes are read from notification.
