@@ -11,6 +11,15 @@
         <dex dex="D:\sqliteimage\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7922d53299d29e3931df4688bce7f4f5f497ed69\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Pat\.android\build-cache\4ba8dd9bb70ac49140764557053d737fec4671e0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
+        <dex dex="D:\sqliteimage\app\build\intermediates\pre-dexed\release\classes_7922d53299d29e3931df4688bce7f4f5f497ed69.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="D:\sqliteimage\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
