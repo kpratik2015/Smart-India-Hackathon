@@ -5,11 +5,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
 import android.net.Uri;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AlertDialog;
@@ -21,25 +18,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
 import com.firebase.jobdispatcher.FirebaseJobDispatcher;
 import com.firebase.jobdispatcher.GooglePlayDriver;
 import com.firebase.jobdispatcher.Job;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.RemoteMessage;
-import com.google.firebase.storage.FileDownloadTask;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
-import java.io.File;
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -48,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private final String TAG = "MainActivity";
-    private StorageReference mStorageRef;
+    //private StorageReference mStorageRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +59,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         meterDB = new databaseHelper(this);
 
+        FirebaseMessaging.getInstance().subscribeToTopic("theft");
+        Log.d(TAG, "Subscribed to theft topic");
+
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -88,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
+        /* --- TRIED FIREBASE STORAGE ---
+
         FirebaseStorage storage = FirebaseStorage.getInstance();
 
         StorageReference storageRef = storage.getReferenceFromUrl("gs://hackathon-project-37c69.appspot.com/").child("MeterDeviceReport.csv");
@@ -95,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //mStorageRef = FirebaseStorage.getInstance().getReference();
 
         File storagePath = new File(Environment.getExternalStorageDirectory(), "downloadmanager");
-// Create direcorty if not exists
+        // Create direcorty if not exists
         if(!storagePath.exists()) {
             storagePath.mkdirs();
             Log.e("Directory","Not found!");
@@ -115,7 +107,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        String token = FirebaseInstanceId.getInstance().getToken();
+        */
+
+        String token = FirebaseInstanceId.getInstance().getToken(); //to send notification to specific device. This is Registration ID
 
         Log.d("TokenOfDevice", " "+ token);
 
@@ -201,6 +195,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+    //BELOW METHODS ARE FOR RUNNING APP NOTIFICATION HANDLING
 
     public void onMessageReceived(RemoteMessage remoteMessage) {
         Log.d(TAG, "From: " + remoteMessage.getFrom());
